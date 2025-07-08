@@ -1,0 +1,22 @@
+ <!-- Modal Producto -->
+<div id="modalProducto" class="modal hidden">
+    <div class="modal-content">
+        <h2 class="text-xl font-semibold mb-4">Nuevo / Editar Producto</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="hidden" id="modalProductoID" />
+            <input id="modalProductoNombre" placeholder="Nombre del producto" class="input-field" />
+            <input id="modalProductoPrecio" type="number" placeholder="Precio" class="input-field" />
+            <input id="modalProductoCategoria" placeholder="Categoría" class="input-field" />
+            <input id="modalProductoDescripcion" placeholder="Descripción" class="input-field" />
+            <input id="modalProductoStock" type="number" placeholder="Stock" class="input-field" />
+        </div>
+        <div class="mt-6 flex justify-end gap-2">
+            <button onclick="cerrarModal('modalProducto')" class="btn bg-gray-500 hover:bg-gray-600">
+                Cancelar
+            </button>
+            <button onclick="guardarProducto()" class="btn bg-blue-600 hover:bg-blue-700">
+                Guardar
+            </button>
+        </div>
+    </div>
+</div>

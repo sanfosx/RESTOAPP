@@ -1,0 +1,21 @@
+ <!-- Modal Mesa -->
+  <div id="modalMesa" class="modal hidden">
+    <div class="modal-content">
+      <h2 class="text-xl font-semibold mb-4">Nueva / Editar Mesa</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="hidden" id="modalMesaID" />
+        <input id="modalMesaNumero" placeholder="Número de Mesa" class="input-field" />
+        <input id="modalMesaCapacidad" type="number" placeholder="Capacidad" class="input-field" />
+        <select id="modalMesaEstado" class="input-field">
+          <option value="libre">Libre</option>
+          <option value="reservada">Reservada</option>
+          <option value="ocupada">Ocupada</option>
+        </select>
+        <input id="modalMesaUbicacion" placeholder="Ubicación (ej: Terraza)" class="input-field" />
+      </div>
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="cerrarModal('modalMesa')" class="btn bg-gray-500 hover:bg-gray-600">Cancelar</button>
+        <button onclick="guardarMesa()" class="btn bg-blue-600 hover:bg-blue-700">Guardar</button>
+      </div>
+    </div>
+  </div>
