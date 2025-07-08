@@ -15,4 +15,15 @@ function mostrarSeccion(seccion) {
   else if (seccion === "mesas") listarMesas?.();
 }
 
-window.onload = () => mostrarSeccion("clientes");
+async function cargarModales() {
+  const modales = ['cliente', 'usuario', 'mesa', 'producto'];
+  for (const nombre of modales) {
+    const html = await fetch(`modals/modal-${nombre}.html`).then(r => r.text());
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+}
+
+window.onload = async () => {
+  await cargarModales();
+  mostrarSeccion("clientes");
+}

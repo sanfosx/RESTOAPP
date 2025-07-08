@@ -1,6 +1,6 @@
  // Productos
  
-    function listarProductos() {
+    function listarProductos () {
       postAPI("productos", "listar").then(res => {
         if (!res.success) return mostrarResultado(res);
         renderTabla("productos", res.data);
