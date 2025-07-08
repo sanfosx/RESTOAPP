@@ -1,0 +1,18 @@
+<div id="modalPedido" class="modal hidden">
+  <div class="modal-content">
+    <h2 class="text-xl font-semibold mb-4">Nuevo / Editar Pedido</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="hidden" id="modalPedidoID" />
+      <input id="modalPedidoCliente" placeholder="ID de Cliente" class="input-field" />
+      <select id="modalPedidoEntrega" class="input-field">
+        <option value="retiro">Retiro</option>
+        <option value="envío">Envío</option>
+        <option value="mesa">Mesa</option>
+      </select>
+    </div>
+    <div class="mt-6 flex justify-end gap-2">
+      <button onclick="cerrarModal('modalPedido')" class="btn bg-gray-500 hover:bg-gray-600">Cancelar</button>
+      <button onclick="guardarPedido()" class="btn bg-blue-600 hover:bg-blue-700">Guardar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div id="modalDetallePedido" class="modal hidden">
+  <div class="modal-content">
+    <h2 class="text-xl font-semibold mb-4">Detalle del Pedido</h2>
+    <table class="w-full border-collapse">
+      <thead class="bg-gray-200 text-gray-700">
+        <tr>
+          <th class="px-4 py-2">Producto ID</th>
+          <th class="px-4 py-2">Nombre</th>
+          <th class="px-4 py-2">Cantidad</th>
+          <th class="px-4 py-2">Precio Unitario</th>
+          <th class="px-4 py-2">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="detallePedidoBody" class="text-sm"></tbody>
+    </table>
+    <div class="mt-4 text-right">
+      <button onclick="cerrarModal('modalDetallePedido')" class="btn bg-gray-600 hover:bg-gray-700">Cerrar</button>
+    </div>
+  </div>
+</div>
