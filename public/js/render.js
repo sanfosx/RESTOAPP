@@ -1,21 +1,20 @@
 function renderTabla(seccion, data) {
   const table = document.getElementById(`tabla${capitalize(seccion)}`);
-  const thead = table.querySelector("thead");
-  const tbody = table.querySelector("tbody");
+  const thead = table?.querySelector("thead");
+  const tbody = table?.querySelector("tbody");
 
-  if (!data || data.length === 0) {
-    table.classList.add("hidden");
+  if (!table || !thead || !tbody || !data || data.length === 0) {
+    if (table) table.classList.add("hidden");
     return;
   }
 
-  let columnas = Object.keys(data[0]);
+  const columnas = Object.keys(data[0]);
   columnas.push("Acciones");
 
-  thead.innerHTML = "<tr>" + columnas.map(k =>
-    `<th class='px-4 py-2 text-left'>${k}</th>`).join("") + "</tr>";
+  thead.innerHTML = "<tr>" + columnas.map(k => `<th class='px-4 py-2 text-left'>${k}</th>`).join("") + "</tr>";
 
   tbody.innerHTML = data.map(row => {
-    let acciones = generarAccionesPorSeccion(seccion, row);
+    const acciones = generarAccionesPorSeccion(seccion, row);
     return "<tr class='border-b'>" +
       Object.values(row).map(v => `<td class='px-4 py-2'>${v}</td>`).join("") +
       `<td class='px-4 py-2'>${acciones}</td></tr>`;
@@ -45,6 +44,6 @@ function generarAccionesPorSeccion(seccion, row) {
         <button onclick='abrirModalProducto(${json})' class='text-blue-600 hover:underline mr-2'>Editar</button>
         <button onclick='eliminarProductoPorID("${id}")' class='text-red-600 hover:underline'>Eliminar</button>`;
     default:
-      return "";
+      return ``;
   }
 }
