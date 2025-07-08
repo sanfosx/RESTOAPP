@@ -13,6 +13,7 @@ function mostrarSeccion(seccion) {
   else if (seccion === "usuarios") listarUsuarios?.();
   else if (seccion === "productos") listarProductos?.();
   else if (seccion === "mesas") listarMesas?.();
+  else if (seccion === "pedidos") listarPedidos?.();
 }
 
 async function cargarModales() {
