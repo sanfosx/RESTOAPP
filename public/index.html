@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body class="bg-gray-100 text-gray-900">
   <div class="min-h-screen p-6 max-w-6xl mx-auto">
     <header class="flex justify-between items-center mb-8">
@@ -17,7 +19,7 @@
         <button id="tabUsuariosBtn" class="btn-tab" onclick="mostrarSeccion('usuarios')">Usuarios</button>
         <button id="tabProductosBtn" class="btn-tab" onclick="mostrarSeccion('productos')">Productos</button>
         <button id="tabMesasBtn" class="btn-tab" onclick="mostrarSeccion('mesas')">Mesas</button>
-        
+
       </nav>
     </header>
 
@@ -25,7 +27,8 @@
     <section id="clientes" class="seccion">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Listado de Clientes</h2>
-        <input type="text" id="buscadorClientes" oninput="filtrarTabla('clientes')" placeholder="Buscar cliente..." class="input-field w-1/3" />
+        <input type="text" id="buscadorClientes" oninput="filtrarTabla('clientes')" placeholder="Buscar cliente..."
+          class="input-field w-1/3" />
         <button onclick="abrirModalCliente()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Cliente</button>
       </div>
       <div class="overflow-auto rounded-lg">
@@ -36,11 +39,12 @@
       </div>
     </section>
 
-     <!-- Usuarios -->
+    <!-- Usuarios -->
     <section id="usuarios" class="seccion hidden">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Listado de Usuarios</h2>
-        <input type="text" id="buscadorUsuarios" oninput="filtrarTabla('usuarios')" placeholder="Buscar usuario..." class="input-field w-1/3" />
+        <input type="text" id="buscadorUsuarios" oninput="filtrarTabla('usuarios')" placeholder="Buscar usuario..."
+          class="input-field w-1/3" />
         <button onclick="abrirModalUsuario()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Usuario</button>
       </div>
       <div class="overflow-auto rounded-lg">
@@ -51,12 +55,14 @@
       </div>
     </section>
 
-     <!-- Productos -->
+    <!-- Productos -->
     <section id="productos" class="seccion hidden">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Listado de Productos</h2>
-        <input type="text" id="buscadorProductos" oninput="filtrarTabla('productos')" placeholder="Buscar producto..." class="input-field w-1/3" />
-        <button onclick="abrirModalProducto()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Producto</button>
+        <input type="text" id="buscadorProductos" oninput="filtrarTabla('productos')" placeholder="Buscar producto..."
+          class="input-field w-1/3" />
+        <button onclick="abrirModalProducto()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo
+          Producto</button>
       </div>
       <div class="overflow-auto rounded-lg">
         <table id="tablaProductos" class="w-full table-auto border-collapse hidden">
@@ -66,11 +72,12 @@
       </div>
     </section>
 
-     <!-- Mesas -->
+    <!-- Mesas -->
     <section id="mesas" class="seccion hidden">
       <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Listado de Mesas</h2>
-        <input type="text" id="buscadorMesas" oninput="filtrarTabla('mesas')" placeholder="Buscar mesa..." class="input-field w-1/3" />
+        <input type="text" id="buscadorMesas" oninput="filtrarTabla('mesas')" placeholder="Buscar mesa..."
+          class="input-field w-1/3" />
         <button onclick="abrirModalMesa()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nueva Mesa</button>
       </div>
       <div class="overflow-auto rounded-lg">
@@ -84,22 +91,23 @@
     <div id="resultado" class="mt-6 text-sm text-gray-600 whitespace-pre-wrap"></div>
   </div>
 
-   <!-- Pedidos -->
-    <section id="pedidos" class="seccion hidden">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-semibold">Listado de Pedidos</h2>
-        <input type="text" id="buscadorPedidos" oninput="filtrarTabla('pedidos')" placeholder="Buscar pedidos..." class="input-field w-1/3" />
-        <button onclick="abrirModalPedido()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Pedido</button>
-      </div>
-      <div class="overflow-auto rounded-lg">
-        <table id="tablaPedidos" class="w-full table-auto border-collapse hidden">
-          <thead class="bg-gray-200 text-gray-700"></thead>
-          <tbody class="text-sm"></tbody>
-        </table>
-      </div>
-    </section>
+  <!-- Pedidos -->
+  <section id="pedidos" class="seccion hidden">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Pedidos</h2>
+      <input type="text" id="buscadorPedidos" oninput="filtrarTabla('pedidos')" placeholder="Buscar pedido..."
+        class="input-field w-1/3" />
+      <button onclick="abrirModalPedido()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Pedido</button>
+    </div>
+    <div class="overflow-auto rounded-lg">
+      <table id="tablaPedidos" class="w-full table-auto border-collapse hidden">
+        <thead class="bg-gray-200 text-gray-700"></thead>
+        <tbody class="text-sm"></tbody>
+      </table>
+    </div>
+  </section>
 
-    <div id="resultado" class="mt-6 text-sm text-gray-600 whitespace-pre-wrap"></div>
+  <div id="resultado" class="mt-6 text-sm text-gray-600 whitespace-pre-wrap"></div>
   </div>
 
 
@@ -117,4 +125,5 @@
   <script src="js/pedidos.js"></script>
 </body>
 </body>
+
 </html>
