@@ -17,7 +17,7 @@ function mostrarSeccion(seccion) {
 }
 
 async function cargarModales() {
-  const modales = ['cliente', 'usuario', 'mesa', 'producto'];
+  const modales = ['cliente', 'usuario', 'mesa', 'producto', 'pedido', 'detalle-pedido'];
   for (const nombre of modales) {
     const html = await fetch(`modals/modal-${nombre}.html`).then(r => r.text());
     document.body.insertAdjacentHTML('beforeend', html);
