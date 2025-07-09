@@ -14,12 +14,11 @@
     <header class="flex justify-between items-center mb-8">
       <h1 class="text-2xl font-bold">Panel de Administración</h1>
       <nav>
-        <button id="tabPedidosBtn" class="btn-tab" onclick="mostrarSeccion('pedidos')">Pedidos</button>
         <button id="tabClientesBtn" class="btn-tab" onclick="mostrarSeccion('clientes')">Clientes</button>
         <button id="tabUsuariosBtn" class="btn-tab" onclick="mostrarSeccion('usuarios')">Usuarios</button>
         <button id="tabProductosBtn" class="btn-tab" onclick="mostrarSeccion('productos')">Productos</button>
         <button id="tabMesasBtn" class="btn-tab" onclick="mostrarSeccion('mesas')">Mesas</button>
-
+        <button id="tabPedidosBtn" class="btn-tab" onclick="mostrarSeccion('pedidos')">Pedidos</button>
       </nav>
     </header>
 
@@ -91,7 +90,7 @@
     <!-- Pedidos -->
     <section id="pedidos" class="seccion hidden">
       <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-semibold">Pedidos</h2>
+        <h2 class="text-xl font-semibold">Listado de Pedidos</h2>
         <input type="text" id="buscadorPedidos" oninput="filtrarTabla('pedidos')" placeholder="Buscar pedido..."
           class="input-field w-1/3" />
         <button onclick="abrirModalPedido()" class="btn bg-green-600 hover:bg-green-700 ml-4">+ Nuevo Pedido</button>
