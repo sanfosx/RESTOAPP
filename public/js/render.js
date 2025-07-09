@@ -43,6 +43,10 @@ function generarAccionesPorSeccion(seccion, row) {
       return `
         <button onclick='abrirModalProducto(${json})' class='text-blue-600 hover:underline mr-2'>Editar</button>
         <button onclick='eliminarProductoPorID("${id}")' class='text-red-600 hover:underline'>Eliminar</button>`;
+    case "pedidos":
+      return `
+        <button onclick='abrirModalPedido(${json})' class='text-blue-600 hover:underline mr-2'>Editar</button>
+        <button onclick='eliminarPedidoPorID("${id}")' class='text-red-600 hover:underline'>Eliminar</button>`;
     default:
       return ``;
   }
